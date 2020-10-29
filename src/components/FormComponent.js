@@ -67,6 +67,7 @@ export default class FormComponent extends Component {
                 if (res.data.validated) {
                     updatedFormElementCode.disabled = true;
                     updatedFormElementPhone.disabled = false;
+                    updatedFormElementCode.placeholder = "";
                     updatedFormElementCode.value = '';
                     updatedFormElementPhone.value = '';
                 };
