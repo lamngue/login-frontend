@@ -1,3 +1,6 @@
+This is a frontend code for a simple login app that have the users enter their number and put in the code that is texted to their number for verification.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
