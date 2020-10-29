@@ -63,17 +63,23 @@ export default class FormComponent extends Component {
         } else {
             Api.postURL("/validate-code", formData).then(res => {
                 const message = res.data.message;
-                const validate = res.data.validated;
-                if (res.data.validated) {
+                let validated = res.data.validated;
+                let validatingCode = this.props.validatingCode;
+                if (validated) {
                     updatedFormElementCode.disabled = true;
                     updatedFormElementPhone.disabled = false;
                     updatedFormElementCode.placeholder = "";
                     updatedFormElementCode.value = '';
                     updatedFormElementPhone.value = '';
-                };
+                    validatingCode = false;
+                } else {
+                    updatedFormElementCode.disabled = false;
+                    updatedFormElementPhone.disabled = true;
+                    validatingCode = true;
+                }
                 updatedControls['code'] = updatedFormElementCode;
                 updatedControls['phone'] = updatedFormElementPhone;
-                this.props.setFormAfterSubmitCode(message, validate, updatedControls);
+                this.props.setFormAfterSubmitCode(message, updatedControls, validatingCode);
             });
         }
     }

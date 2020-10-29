@@ -56,10 +56,10 @@ class App extends Component {
     });
   }
 
-  setFormAfterSubmitCode(message, validate, updatedControls) {
+  setFormAfterSubmitCode(message, updatedControls, validatingCode) {
     this.setState({
       message: message,
-      validatingCode: !validate,
+      validatingCode: validatingCode,
       formControls: updatedControls,
       formIsValid: false
     })
