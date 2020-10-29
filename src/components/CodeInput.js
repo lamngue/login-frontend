@@ -1,4 +1,5 @@
 import React from 'react';
+import './TextInput.css';
 
 const CodeInput = props => {
 
