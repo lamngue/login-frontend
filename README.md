@@ -1,6 +1,6 @@
 This is a frontend code for a simple login app that have the users enter their number and put in the code that is texted to their number for verification.
 
-Made with React and Express.js, Hosted using Firebase.
+Made with React and Express.js, Hosted using Firebase. Code for server is at: https://github.com/lamngue/login-server
 
 # Getting Started with Create React App
 
